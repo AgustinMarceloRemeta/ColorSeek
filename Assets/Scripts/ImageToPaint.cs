@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class ImageToPaint : MonoBehaviour
 {
-    public List<Color> colors = new List<Color>();
-    public List<Sprite> sprites= new List<Sprite>();
+    List<Color> colors = new List<Color>();
+    List<Sprite> sprites= new List<Sprite>();
     [SerializeField] LevelSO levelSO;
     [SerializeField] Image image, visualFindColor;
     bool ready;
     [SerializeField] Button buttonToChange;
-    public int progress;
+    int progress;
 
     private void Start()
     {

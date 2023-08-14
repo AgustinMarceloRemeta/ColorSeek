@@ -20,7 +20,8 @@ public class CameraDetected : MonoBehaviour
     [SerializeField] float distanceColor;
 
     public static CameraDetected instance;
-    [SerializeReference] Button buttonToChange;
+    [SerializeField] Button buttonToChange;
+    [SerializeField] bool testMode;
 
     private void Awake()
     {
@@ -54,7 +55,7 @@ public class CameraDetected : MonoBehaviour
 
     void Update()
     {
-       // actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
+       if(!testMode) actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
         visualActualColor.color = actualColor;
     }
     void OnDestroy()

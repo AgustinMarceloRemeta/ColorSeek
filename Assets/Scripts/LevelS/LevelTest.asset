@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   colors:
+  - {r: 1, g: 0, b: 0.78170204, a: 1}
+  - {r: 0.85313916, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.071358845, b: 0, a: 1}
   - {r: 0, g: 0.1406796, b: 1, a: 1}
   - {r: 0.2830189, g: 0.044054832, b: 0.044054832, a: 1}
   - {r: 0.13751912, g: 1, b: 0, a: 1}
   sprites:
+  - {fileID: 21300000, guid: 99f3484da7f564d47aabbe65dc879f36, type: 3}
+  - {fileID: 21300000, guid: 4f787255cd734564ca02ef9379fb0ebd, type: 3}
+  - {fileID: 21300000, guid: bec59e513ddf71647825b69a823d446f, type: 3}
   - {fileID: 21300000, guid: 5e16558aa72ca90409bad7723b5e49ff, type: 3}
   - {fileID: 21300000, guid: c8c496e383141a74f80d22fe2bc22b6b, type: 3}
   - {fileID: 21300000, guid: 7127b108d758b08469ae6081825761aa, type: 3}
-  defaultSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 274f8cb8398a0de42b69b98d09460e73, type: 3}
