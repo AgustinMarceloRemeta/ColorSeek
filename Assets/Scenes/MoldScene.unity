@@ -2001,8 +2001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a81f0907678ec849924392c666f75f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: []
-  sprites: []
+  levelSO: {fileID: 11400000, guid: 0e56e42190ac0984b8497d27cc18e8c5, type: 2}
   image: {fileID: 674077662}
   visualFindColor: {fileID: 1517156841}
   buttonToChange: {fileID: 1470281881}
+  progress: 0

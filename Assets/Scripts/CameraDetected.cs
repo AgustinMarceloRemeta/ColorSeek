@@ -54,7 +54,8 @@ public class CameraDetected : MonoBehaviour
 
     void Update()
     {
-       visualActualColor.color = GetCameraPixelColor(webCamTexture, .5f, .5f);
+       // actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
+        visualActualColor.color = actualColor;
     }
     void OnDestroy()
     {
@@ -93,6 +94,6 @@ public class CameraDetected : MonoBehaviour
 
     public bool detectedColor(Color colorFind)
     {
-        return ColorDistance(colorFind, GetCameraPixelColor(webCamTexture, .5f, .5f)) <= distanceColor;
+        return ColorDistance(colorFind, actualColor) <= distanceColor;
     }
 }
