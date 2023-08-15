@@ -306,6 +306,84 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 377.4}
   m_Pivot: {x: 0, y: 1}
+--- !u!1 &324079003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324079005}
+  - component: {fileID: 324079004}
+  - component: {fileID: 324079006}
+  m_Layer: 0
+  m_Name: AdsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &324079004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324079003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bb437fadd0d0e4496416581ccb1c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5382091
+  _iOSGameId: 5382090
+  _testMode: 1
+  interstitialAddsButton:
+  - {fileID: 799860651}
+  - {fileID: 612765190}
+  - {fileID: 460851154}
+  - {fileID: 1991148402}
+  - {fileID: 1057391856}
+  - {fileID: 1327369197}
+  - {fileID: 414037735}
+  - {fileID: 767285457}
+  - {fileID: 385207622}
+  - {fileID: 1017924548}
+  - {fileID: 530927814}
+  - {fileID: 950037174}
+  levels: {fileID: 1083205121}
+  menu: 1
+--- !u!4 &324079005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324079003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 409.75598, y: 419.60065, z: -7.4743576}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &324079006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324079003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2917aa9e125e0a8479e25c2f1a0119f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bannerPosition: 4
+  _androidAdUnitId: Banner_Android
+  _iOSAdUnitId: Banner_iOS
 --- !u!1 &344695468
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +531,7 @@ GameObject:
   - component: {fileID: 385207621}
   - component: {fileID: 385207620}
   - component: {fileID: 385207619}
+  - component: {fileID: 385207622}
   m_Layer: 5
   m_Name: Button Lvl (8)
   m_TagString: Untagged
@@ -523,7 +602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 385207620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &385207620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +653,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385207617}
   m_CullTransparentMesh: 1
+--- !u!114 &385207622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385207617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &389793755
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +814,7 @@ GameObject:
   - component: {fileID: 414037734}
   - component: {fileID: 414037733}
   - component: {fileID: 414037732}
+  - component: {fileID: 414037735}
   m_Layer: 5
   m_Name: Button Lvl (6)
   m_TagString: Untagged
@@ -779,7 +885,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 414037733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &414037733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,6 +936,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414037730}
   m_CullTransparentMesh: 1
+--- !u!114 &414037735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414037730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &460851149
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +962,7 @@ GameObject:
   - component: {fileID: 460851153}
   - component: {fileID: 460851152}
   - component: {fileID: 460851151}
+  - component: {fileID: 460851154}
   m_Layer: 5
   m_Name: Button Lvl (2)
   m_TagString: Untagged
@@ -900,7 +1033,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460851152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460851152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,6 +1084,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460851149}
   m_CullTransparentMesh: 1
+--- !u!114 &460851154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460851149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &490042303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1380,7 @@ GameObject:
   - component: {fileID: 530927813}
   - component: {fileID: 530927812}
   - component: {fileID: 530927811}
+  - component: {fileID: 530927814}
   m_Layer: 5
   m_Name: Button Lvl (10)
   m_TagString: Untagged
@@ -1291,7 +1451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 530927812}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &530927812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1502,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530927809}
   m_CullTransparentMesh: 1
+--- !u!114 &530927814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530927809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &536795566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1749,7 @@ GameObject:
   - component: {fileID: 612765189}
   - component: {fileID: 612765188}
   - component: {fileID: 612765187}
+  - component: {fileID: 612765190}
   m_Layer: 5
   m_Name: Button Lvl (1)
   m_TagString: Untagged
@@ -1633,7 +1820,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 612765188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &612765188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1871,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612765185}
   m_CullTransparentMesh: 1
+--- !u!114 &612765190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612765185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &694218678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +2193,7 @@ GameObject:
   - component: {fileID: 767285456}
   - component: {fileID: 767285455}
   - component: {fileID: 767285454}
+  - component: {fileID: 767285457}
   m_Layer: 5
   m_Name: Button Lvl (7)
   m_TagString: Untagged
@@ -2050,7 +2264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 767285455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &767285455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,6 +2315,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767285452}
   m_CullTransparentMesh: 1
+--- !u!114 &767285457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767285452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &774741638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2476,7 @@ GameObject:
   - component: {fileID: 799860650}
   - component: {fileID: 799860649}
   - component: {fileID: 799860648}
+  - component: {fileID: 799860651}
   m_Layer: 5
   m_Name: Button Lvl
   m_TagString: Untagged
@@ -2306,7 +2547,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 799860649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &799860649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,6 +2598,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799860646}
   m_CullTransparentMesh: 1
+--- !u!114 &799860651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799860646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &950037169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,6 +2624,7 @@ GameObject:
   - component: {fileID: 950037173}
   - component: {fileID: 950037172}
   - component: {fileID: 950037171}
+  - component: {fileID: 950037174}
   m_Layer: 5
   m_Name: Button Lvl (11)
   m_TagString: Untagged
@@ -2427,7 +2695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 950037172}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &950037172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2466,6 +2746,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950037169}
   m_CullTransparentMesh: 1
+--- !u!114 &950037174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950037169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &1017924543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,6 +2772,7 @@ GameObject:
   - component: {fileID: 1017924547}
   - component: {fileID: 1017924546}
   - component: {fileID: 1017924545}
+  - component: {fileID: 1017924548}
   m_Layer: 5
   m_Name: Button Lvl (9)
   m_TagString: Untagged
@@ -2548,7 +2843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1017924546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1017924546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,6 +2894,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017924543}
   m_CullTransparentMesh: 1
+--- !u!114 &1017924548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017924543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &1057391851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,6 +2920,7 @@ GameObject:
   - component: {fileID: 1057391855}
   - component: {fileID: 1057391854}
   - component: {fileID: 1057391853}
+  - component: {fileID: 1057391856}
   m_Layer: 5
   m_Name: Button Lvl (4)
   m_TagString: Untagged
@@ -2669,7 +2991,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057391854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1057391854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2708,6 +3042,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057391851}
   m_CullTransparentMesh: 1
+--- !u!114 &1057391856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057391851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &1083205121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,7 +3071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1083205122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3015,6 +3363,7 @@ GameObject:
   - component: {fileID: 1327369196}
   - component: {fileID: 1327369195}
   - component: {fileID: 1327369194}
+  - component: {fileID: 1327369197}
   m_Layer: 5
   m_Name: Button Lvl (5)
   m_TagString: Untagged
@@ -3085,7 +3434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327369195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1327369195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,6 +3485,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327369192}
   m_CullTransparentMesh: 1
+--- !u!114 &1327369197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327369192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &1387976879
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,6 +4448,7 @@ GameObject:
   - component: {fileID: 1991148401}
   - component: {fileID: 1991148400}
   - component: {fileID: 1991148399}
+  - component: {fileID: 1991148402}
   m_Layer: 5
   m_Name: Button Lvl (3)
   m_TagString: Untagged
@@ -4143,7 +4519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1991148400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 385207622}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1991148400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4182,6 +4570,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991148397}
   m_CullTransparentMesh: 1
+--- !u!114 &1991148402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991148397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf97fa25fcfab234bacbcc6fd5c0684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
 --- !u!1 &2042676521
 GameObject:
   m_ObjectHideFlags: 0

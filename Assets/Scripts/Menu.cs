@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
             int progress = PlayerPrefs.GetInt("Level" + levelActual);
             if (progress != 0) buttons[i].image.sprite = levels[i].sprites[progress-1];
             else buttons[i].image.sprite = levels[i].defaultSprite;
-            buttons[i].onClick.AddListener(() => SceneManager.LoadScene("Level"+levelActual));
+            buttons[i].onClick.AddListener(() => SceneManager.LoadScene("Level "+levelActual));
         }
     }
 }
