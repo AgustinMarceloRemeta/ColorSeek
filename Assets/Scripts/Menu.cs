@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] GameObject buttonsParent;
+    [SerializeField] GameObject buttonsParent, selectDifficulty, principal, easy, medium, hard;
+    [SerializeField] float easyValue, mediumValue, hardValue;
     public LevelSO[] levels;
     public Button[] buttons;
+    [SerializeField] TextMeshProUGUI actualDifficult;
 
     private void Start()
     {
-        PlayerPrefs.GetFloat("DistanceColor");
+        float distance = PlayerPrefs.GetFloat("DistanceColor");
+        if (distance != 0)
+        {
+            selectDifficulty.SetActive(false);
+            principal.SetActive(true);
+            if (easyValue == distance) easy.SetActive(true);
+            else if (mediumValue == distance) medium.SetActive(true);
+            else if (hardValue == distance) hard.SetActive(true);
+        }
         levels = Resources.LoadAll<LevelSO>("LevelS");
         buttons = buttonsParent.GetComponentsInChildren<Button>();
         for (int i = 0; i < levels.Length; i++)
