@@ -982,7 +982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 5382091
   _iOSGameId: 5382090
-  _testMode: 1
+  _testMode: 0
   interstitialAddsButton:
   - {fileID: 1148731272}
   levels: {fileID: 0}
@@ -2301,7 +2301,6 @@ MonoBehaviour:
   errorText: {fileID: 1632637530}
   visualActualColor: {fileID: 170458829}
   actualColor: {r: 0, g: 0, b: 0, a: 0}
-  distanceColor: 0.7
   buttonToChange: {fileID: 651178262}
   testMode: 0
 --- !u!4 &2107888095

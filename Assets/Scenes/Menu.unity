@@ -844,7 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 5382091
   _iOSGameId: 5382090
-  _testMode: 1
+  _testMode: 0
   interstitialAddsButton:
   - {fileID: 799860651}
   - {fileID: 612765190}
