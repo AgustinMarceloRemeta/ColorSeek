@@ -850,7 +850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 274f8cb8398a0de42b69b98d09460e73, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2002,10 +2002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a81f0907678ec849924392c666f75f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: []
-  sprites: []
-  levelSO: {fileID: 11400000, guid: 0e56e42190ac0984b8497d27cc18e8c5, type: 2}
+  levelSO: {fileID: 11400000, guid: c3ae31641727fd24e824915ad830f1ab, type: 2}
   image: {fileID: 674077662}
   visualFindColor: {fileID: 1517156841}
   buttonToChange: {fileID: 1470281881}
-  progress: 0

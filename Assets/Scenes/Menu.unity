@@ -4211,10 +4211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d440b94ceecaa0e4db2952c6307ffec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 11400000, guid: 0e56e42190ac0984b8497d27cc18e8c5, type: 2}
-  buttons:
-  - {fileID: 799860648}
+  buttonsParent: {fileID: 81348444}
+  levels: []
+  buttons: []
 --- !u!4 &2042676523
 Transform:
   m_ObjectHideFlags: 0
