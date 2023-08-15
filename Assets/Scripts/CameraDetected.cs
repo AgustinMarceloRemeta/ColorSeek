@@ -17,7 +17,7 @@ public class CameraDetected : MonoBehaviour
 
     //color
     public Color actualColor;
-    [SerializeField] float distanceColor;
+    float distanceColor;
 
     public static CameraDetected instance;
     [SerializeField] Button buttonToChange;
@@ -27,6 +27,7 @@ public class CameraDetected : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(this);
+        distanceColor = PlayerPrefs.GetFloat("DistanceColor");
     }
     void Start()
     {

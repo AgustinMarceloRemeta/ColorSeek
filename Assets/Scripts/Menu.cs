@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.GetFloat("DistanceColor");
         levels = Resources.LoadAll<LevelSO>("LevelS");
         buttons = buttonsParent.GetComponentsInChildren<Button>();
         for (int i = 0; i < levels.Length; i++)
@@ -22,5 +23,10 @@ public class Menu : MonoBehaviour
             else buttons[i].image.sprite = levels[i].defaultSprite;
             buttons[i].onClick.AddListener(() => SceneManager.LoadScene("Level "+levelActual));
         }
+    }
+
+    public void SetDistance(float detected)
+    {
+        PlayerPrefs.SetFloat("DistanceColor", detected);
     }
 }
