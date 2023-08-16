@@ -12,6 +12,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] bool menu;
     void Awake()
     {
+        interstitialAddsButton = FindObjectsOfType<InterstitialAdsButton>();
         InitializeAds();
     }
     private void Start()
