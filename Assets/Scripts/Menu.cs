@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     [SerializeField] float easyValue, mediumValue, hardValue;
     public LevelSO[] levels;
     public Button[] buttons;
-    [SerializeField] TextMeshProUGUI actualDifficult;
+
 
     private void Start()
     {

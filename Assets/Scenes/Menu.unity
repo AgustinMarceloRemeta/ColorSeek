@@ -215,7 +215,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.7
+          m_FloatArgument: 0.65
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7823,7 +7823,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.7
+          m_FloatArgument: 0.65
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -8963,9 +8963,9 @@ MonoBehaviour:
   easy: {fileID: 798245066}
   medium: {fileID: 648056875}
   hard: {fileID: 737874506}
-  easyValue: 0.3
+  easyValue: 0.65
   mediumValue: 0.5
-  hardValue: 0.7
+  hardValue: 0.3
   levels: []
   buttons: []
   actualDifficult: {fileID: 0}

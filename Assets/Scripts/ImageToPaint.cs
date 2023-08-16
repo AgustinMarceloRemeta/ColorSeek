@@ -11,6 +11,7 @@ public class ImageToPaint : MonoBehaviour
     [SerializeField] Image image, visualFindColor;
     bool ready;
     [SerializeField] Button buttonToChange;
+    [SerializeField] GameObject buttonReset, buttonImage, cameraParent,pictureParent;
     int progress;
 
     private void Start()
@@ -47,6 +48,11 @@ public class ImageToPaint : MonoBehaviour
             }
         }
         if (colors.Count > 0) visualFindColor.color = colors[0];
+        else
+        {
+            buttonReset.SetActive(true);
+            buttonToChange.gameObject.SetActive(false);
+        }
     }
 
     public void ChangeImage()
@@ -60,7 +66,10 @@ public class ImageToPaint : MonoBehaviour
             if (colors.Count <= 0)
             {
                 ready = true;
-                visualFindColor.color = Color.black;
+                buttonReset.SetActive(true);
+                pictureParent.SetActive(true);
+                buttonImage.SetActive(false);
+                cameraParent.SetActive(false);
             }
             else
             {
@@ -68,6 +77,7 @@ public class ImageToPaint : MonoBehaviour
                 progress++;
                 PlayerPrefs.SetInt("Level" + levelSO.level, progress);
             }
+
         }
     }
 
@@ -81,5 +91,15 @@ public class ImageToPaint : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) PlayerPrefs.DeleteAll();
+        if (Input.GetKeyDown(KeyCode.T)) ResetImage();
+    }
+
+    public void ResetImage()
+    {
+        progress= 0;
+        PlayerPrefs.SetInt("Level" + levelSO.level, 0);
+        buttonReset.SetActive(false);
+        UpdateSO();
+        SetVisual();
     }
 }
