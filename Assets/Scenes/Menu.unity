@@ -455,7 +455,6 @@ GameObject:
   - component: {fileID: 183199844}
   - component: {fileID: 183199843}
   - component: {fileID: 183199842}
-  - component: {fileID: 183199846}
   m_Layer: 5
   m_Name: Button Lvl (5)
   m_TagString: Untagged
@@ -541,9 +540,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -591,21 +590,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183199840}
   m_CullTransparentMesh: 1
---- !u!114 &183199846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183199840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &259057504
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +745,6 @@ GameObject:
   - component: {fileID: 342295675}
   - component: {fileID: 342295674}
   - component: {fileID: 342295673}
-  - component: {fileID: 342295677}
   m_Layer: 5
   m_Name: Button Lvl (9)
   m_TagString: Untagged
@@ -847,9 +830,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -897,21 +880,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342295671}
   m_CullTransparentMesh: 1
---- !u!114 &342295677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342295671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &344695468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1290,6 @@ GameObject:
   - component: {fileID: 408952480}
   - component: {fileID: 408952479}
   - component: {fileID: 408952478}
-  - component: {fileID: 408952482}
   m_Layer: 5
   m_Name: Button Lvl (4)
   m_TagString: Untagged
@@ -1408,9 +1375,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1458,21 +1425,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408952476}
   m_CullTransparentMesh: 1
---- !u!114 &408952482
+--- !u!1 &437416713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437416715}
+  - component: {fileID: 437416714}
+  m_Layer: 0
+  m_Name: Menu Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &437416714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408952476}
+  m_GameObject: {fileID: 437416713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
+  m_Script: {fileID: 11500000, guid: d440b94ceecaa0e4db2952c6307ffec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
+  levels: []
+  buttons: []
+  buttonsParent: {fileID: 81348444}
+--- !u!4 &437416715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437416713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 673.8372, y: 431.2927, z: -1.2418287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444116975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,7 +1667,6 @@ GameObject:
   - component: {fileID: 460851152}
   - component: {fileID: 460851151}
   - component: {fileID: 460851154}
-  - component: {fileID: 460851155}
   m_Layer: 5
   m_Name: Button Lvl (2)
   m_TagString: Untagged
@@ -1740,9 +1738,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1804,21 +1802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidAdUnitId: Interstitial_Android
   _iOsAdUnitId: Interstitial_iOS
---- !u!114 &460851155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460851149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &490042303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,7 +2489,6 @@ GameObject:
   - component: {fileID: 612765188}
   - component: {fileID: 612765187}
   - component: {fileID: 612765190}
-  - component: {fileID: 612765191}
   m_Layer: 5
   m_Name: Button Lvl (1)
   m_TagString: Untagged
@@ -2578,9 +2560,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2642,21 +2624,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidAdUnitId: Interstitial_Android
   _iOsAdUnitId: Interstitial_iOS
---- !u!114 &612765191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612765185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &637764715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2637,6 @@ GameObject:
   - component: {fileID: 637764719}
   - component: {fileID: 637764718}
   - component: {fileID: 637764717}
-  - component: {fileID: 637764721}
   m_Layer: 5
   m_Name: Button Lvl (6)
   m_TagString: Untagged
@@ -2756,9 +2722,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2806,21 +2772,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637764715}
   m_CullTransparentMesh: 1
---- !u!114 &637764721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637764715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &682702613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,7 +2785,6 @@ GameObject:
   - component: {fileID: 682702617}
   - component: {fileID: 682702616}
   - component: {fileID: 682702615}
-  - component: {fileID: 682702619}
   m_Layer: 5
   m_Name: Button Lvl (3)
   m_TagString: Untagged
@@ -2920,9 +2870,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2970,21 +2920,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682702613}
   m_CullTransparentMesh: 1
---- !u!114 &682702619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682702613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &732708029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,7 +3070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &756788438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3172,7 +3107,6 @@ GameObject:
   - component: {fileID: 767057275}
   - component: {fileID: 767057274}
   - component: {fileID: 767057273}
-  - component: {fileID: 767057277}
   m_Layer: 5
   m_Name: Button Lvl (10)
   m_TagString: Untagged
@@ -3258,9 +3192,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3308,21 +3242,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767057271}
   m_CullTransparentMesh: 1
---- !u!114 &767057277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767057271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &774741638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,7 +3390,6 @@ GameObject:
   - component: {fileID: 799860649}
   - component: {fileID: 799860648}
   - component: {fileID: 799860651}
-  - component: {fileID: 799860652}
   m_Layer: 5
   m_Name: Button Lvl
   m_TagString: Untagged
@@ -3543,9 +3461,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3607,21 +3525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidAdUnitId: Interstitial_Android
   _iOsAdUnitId: Interstitial_iOS
---- !u!114 &799860652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799860646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &911619179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4134,7 +4037,6 @@ GameObject:
   - component: {fileID: 1122545527}
   - component: {fileID: 1122545526}
   - component: {fileID: 1122545525}
-  - component: {fileID: 1122545529}
   m_Layer: 5
   m_Name: Button Lvl (11)
   m_TagString: Untagged
@@ -4220,9 +4122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4270,21 +4172,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122545523}
   m_CullTransparentMesh: 1
---- !u!114 &1122545529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122545523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &1136779964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,7 +4293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.40784314}
+  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.7176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4482,7 +4369,6 @@ GameObject:
   - component: {fileID: 1237269458}
   - component: {fileID: 1237269457}
   - component: {fileID: 1237269456}
-  - component: {fileID: 1237269460}
   m_Layer: 5
   m_Name: Button Lvl (7)
   m_TagString: Untagged
@@ -4568,9 +4454,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4618,21 +4504,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237269454}
   m_CullTransparentMesh: 1
---- !u!114 &1237269460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237269454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &1272388607
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,7 +4554,6 @@ GameObject:
   - component: {fileID: 1311479379}
   - component: {fileID: 1311479378}
   - component: {fileID: 1311479377}
-  - component: {fileID: 1311479381}
   m_Layer: 5
   m_Name: Button Lvl (8)
   m_TagString: Untagged
@@ -4769,9 +4639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183199846}
-        m_TargetAssemblyTypeName: ScaleButton, Assembly-CSharp
-        m_MethodName: OpenLevel
+      - m_Target: {fileID: 183199842}
+        m_TargetAssemblyTypeName: InterstitialAdsButton, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4819,21 +4689,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311479375}
   m_CullTransparentMesh: 1
---- !u!114 &1311479381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311479375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a1856c7b6bc9a4e949a5d7f65eb507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 183199841}
-  newScale: 3
-  interstitialAds: {fileID: 183199842}
 --- !u!1 &1387976879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,7 +4945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.40784314}
+  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.7176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5895,7 +5750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.40784314}
+  m_Color: {r: 0.32156864, g: 0.3019608, b: 0.3019608, a: 0.7176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

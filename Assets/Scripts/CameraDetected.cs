@@ -14,31 +14,36 @@ public class CameraDetected : MonoBehaviour
     [SerializeField] RawImage rawImage;
     [SerializeField] TextMeshProUGUI errorText;
     [SerializeField] Image visualActualColor;
+    [SerializeField] Sprite cameraNoFound;
 
     //color
     public Color actualColor;
-    float distanceColor;
+    [SerializeField] float distanceColor;
 
     public static CameraDetected instance;
     [SerializeField] Button buttonToChange;
-    [SerializeField] bool testMode;
+    [SerializeField] bool testMode, testNoCamera;
+    [SerializeField] GameObject target, findCamera;
+    bool cameraActive;
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else Destroy(this);
-        distanceColor = PlayerPrefs.GetFloat("DistanceColor");
     }
     void Start()
     {
         AsignCamTexture();
     }
 
-    private void AsignCamTexture()
+    public void AsignCamTexture()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-        if (devices.Length > 0)
+        if (devices.Length > 0 && !testNoCamera && devices != null)
         {
+            cameraActive = true;
+            target.SetActive(true);
+            findCamera.SetActive(false);
             webCamTexture = new WebCamTexture(devices[0].name);
             webCamTexture.Play();
 
@@ -51,12 +56,18 @@ public class CameraDetected : MonoBehaviour
                 rawImageCamera.transform.Rotate(0, 0, -webCamTexture.videoRotationAngle);
             }
         }
-       // else errorText.text = "No se encontró ninguna cámara.";
+        else
+        {
+            cameraActive = false;
+            rawImage.texture = cameraNoFound.texture;
+            target.SetActive(false);
+            findCamera.SetActive(true);
+        }
     }
 
     void Update()
     {
-       if(!testMode) actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
+       if(!testMode && cameraActive) actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
         visualActualColor.color = actualColor;
     }
     void OnDestroy()

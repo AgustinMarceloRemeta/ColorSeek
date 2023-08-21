@@ -7,25 +7,16 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] GameObject buttonsParent, selectDifficulty, principal, easy, medium, hard;
-    [SerializeField] float easyValue, mediumValue, hardValue;
     public LevelSO[] levels;
     public Button[] buttons;
+    [SerializeField] GameObject buttonsParent;
+
 
 
     private void Start()
     {
-        float distance = PlayerPrefs.GetFloat("DistanceColor");
-        if (distance != 0)
-        {
-            selectDifficulty.SetActive(false);
-            principal.SetActive(true);
-            if (easyValue == distance) easy.SetActive(true);
-            else if (mediumValue == distance) medium.SetActive(true);
-            else if (hardValue == distance) hard.SetActive(true);
-        }
-        levels = Resources.LoadAll<LevelSO>("LevelS");
         buttons = buttonsParent.GetComponentsInChildren<Button>();
+        levels = Resources.LoadAll<LevelSO>("LevelS");
         for (int i = 0; i < levels.Length; i++)
         {
             int levelActual = levels[i].level;
@@ -36,8 +27,4 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void SetDistance(float detected)
-    {
-        PlayerPrefs.SetFloat("DistanceColor", detected);
-    }
 }

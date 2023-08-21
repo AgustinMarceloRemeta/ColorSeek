@@ -47,11 +47,16 @@ public class ImageToPaint : MonoBehaviour
                 sprites.RemoveAt(0);
             }
         }
-        if (colors.Count > 0) visualFindColor.color = colors[0];
+        if (colors.Count > 0)
+        {
+            visualFindColor.color = colors[0];
+            buttonReset.SetActive(false);
+            buttonImage.gameObject.SetActive(true);
+        }
         else
         {
             buttonReset.SetActive(true);
-            buttonToChange.gameObject.SetActive(false);
+            buttonImage.gameObject.SetActive(false);
         }
     }
 
@@ -91,7 +96,6 @@ public class ImageToPaint : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) PlayerPrefs.DeleteAll();
-        if (Input.GetKeyDown(KeyCode.T)) ResetImage();
     }
 
     public void ResetImage()
