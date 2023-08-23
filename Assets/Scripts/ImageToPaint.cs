@@ -90,7 +90,6 @@ public class ImageToPaint : MonoBehaviour
     {
         if(colors.Count>0)
         if (CameraDetected.instance.detectedColor(colors[0])) ChangeImage();
-        else print("Nooo");
     }
 
     private void Update()
@@ -105,5 +104,6 @@ public class ImageToPaint : MonoBehaviour
         buttonReset.SetActive(false);
         UpdateSO();
         SetVisual();
+        ready = false;
     }
 }
