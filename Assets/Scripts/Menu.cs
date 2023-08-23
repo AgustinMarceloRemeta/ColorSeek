@@ -9,7 +9,7 @@ public class Menu : MonoBehaviour
 {
     public LevelSO[] levels;
     public Button[] buttons;
-    [SerializeField] GameObject buttonsParent;
+    [SerializeField] GameObject buttonsParent, cameraOn;
 
 
 
@@ -27,4 +27,10 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void FindCamera()
+    {
+        WebCamDevice[] devices = WebCamTexture.devices;
+        if (devices.Length > 0 && devices != null) cameraOn.SetActive(false);
+        else cameraOn.SetActive(true);
+    }
 }

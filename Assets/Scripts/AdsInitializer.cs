@@ -7,12 +7,12 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] string _iOSGameId;
     [SerializeField] bool _testMode = true;
     private string _gameId;
-    [SerializeField] InterstitialAdsButton[] interstitialAddsButton;
+    [SerializeField] InterstitialAdsButton interstitialAddButton;
     [SerializeField] GameObject levels;
     [SerializeField] bool menu;
     void Awake()
     {
-        interstitialAddsButton = FindObjectsOfType<InterstitialAdsButton>();
+        interstitialAddButton = FindObjectOfType<InterstitialAdsButton>();
         InitializeAds();
     }
     private void Start()
@@ -38,10 +38,12 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
-        foreach (var item in interstitialAddsButton)
-        {
-            item.LoadAd();
-        }
+        LoadButton(interstitialAddButton);
+    }
+
+    public void LoadButton(InterstitialAdsButton addsButton)
+    {
+        addsButton.LoadAd();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
