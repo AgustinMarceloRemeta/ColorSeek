@@ -6,25 +6,26 @@ using TMPro;
 
 public class CameraDetected : MonoBehaviour
 {
-    //camera
+    [Header("Camera")]
+    [SerializeField] GameObject target;
+    [SerializeField] GameObject findCamera;
+    bool cameraActive;
     WebCamTexture webCam;
     private WebCamTexture webCamTexture;
 
-    //ui
+    [Header("Ui")]
     [SerializeField] RawImage rawImage;
     [SerializeField] TextMeshProUGUI errorText;
     [SerializeField] Image visualActualColor;
     [SerializeField] Sprite cameraNoFound;
+    [SerializeField] Button buttonToChange;
 
-    //color
-    public Color actualColor;
+    [Header("Color")]
     [SerializeField] float distanceColor;
+    Color actualColor;
 
     public static CameraDetected instance;
-    [SerializeField] Button buttonToChange;
-    [SerializeField] bool testMode, testNoCamera;
-    [SerializeField] GameObject target, findCamera;
-    bool cameraActive;
+
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class CameraDetected : MonoBehaviour
     public void AsignCamTexture()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-        if (devices.Length > 0 && !testNoCamera && devices != null)
+        if (devices.Length > 0 && devices != null)
         {
             cameraActive = true;
             target.SetActive(true);
@@ -67,7 +68,7 @@ public class CameraDetected : MonoBehaviour
 
     void Update()
     {
-       if(!testMode && cameraActive) actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
+       if(cameraActive) actualColor = GetCameraPixelColor(webCamTexture, .5f, .5f);
         visualActualColor.color = actualColor;
     }
     void OnDestroy()

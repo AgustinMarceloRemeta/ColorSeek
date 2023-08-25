@@ -1,17 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ImageToPaint : MonoBehaviour
 {
-    List<Color> colors = new List<Color>();
-    List<Sprite> sprites= new List<Sprite>();
-    [SerializeField] LevelSO levelSO;
-    [SerializeField] Image image, visualFindColor;
-    bool ready;
+    [Header("Visual")]
     [SerializeField] Button buttonToChange;
-    [SerializeField] GameObject buttonReset, buttonImage, cameraParent,pictureParent;
+    [SerializeField] GameObject buttonReset, buttonImage, cameraParent, pictureParent;
+    [SerializeField] Image image, visualFindColor;
+
+    [Header("Level")]
+    [SerializeField] LevelSO levelSO;
+    List<Color> colors = new List<Color>();
+    List<Sprite> sprites= new List<Sprite>();   
+    bool ready;
     int progress;
 
     private void Start()
@@ -47,6 +49,7 @@ public class ImageToPaint : MonoBehaviour
                 sprites.RemoveAt(0);
             }
         }
+
         if (colors.Count > 0)
         {
             visualFindColor.color = colors[0];
@@ -90,11 +93,6 @@ public class ImageToPaint : MonoBehaviour
     {
         if(colors.Count>0)
         if (CameraDetected.instance.detectedColor(colors[0])) ChangeImage();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R)) PlayerPrefs.DeleteAll();
     }
 
     public void ResetImage()

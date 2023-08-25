@@ -288,8 +288,7 @@ MonoBehaviour:
   _androidGameId: 5382091
   _iOSGameId: 5382090
   _testMode: 0
-  interstitialAddsButton:
-  - {fileID: 1148731272}
+  interstitialAddButton: {fileID: 0}
   levels: {fileID: 0}
   menu: 0
 --- !u!4 &992382388
@@ -491,17 +490,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b8f6a741b38b04dbeb725c17ed66bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 1366960005}
+  findCamera: {fileID: 2073751198}
   rawImage: {fileID: 1169991782}
   errorText: {fileID: 1632637530}
   visualActualColor: {fileID: 170458829}
   cameraNoFound: {fileID: 21300000, guid: 55281d8553dd10a429cf090af015c5b1, type: 3}
-  actualColor: {r: 0, g: 0, b: 0, a: 0}
-  distanceColor: 0.69
   buttonToChange: {fileID: 651178262}
-  testMode: 0
-  testNoCamera: 0
-  target: {fileID: 1366960005}
-  findCamera: {fileID: 2073751198}
+  distanceColor: 0.55
 --- !u!4 &2107888095
 Transform:
   m_ObjectHideFlags: 0
@@ -529,14 +525,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a81f0907678ec849924392c666f75f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSO: {fileID: 11400000, guid: a470e47d4e65fe448ae15ede0b02a0e0, type: 2}
-  image: {fileID: 674077662}
-  visualFindColor: {fileID: 1517156841}
   buttonToChange: {fileID: 1470281881}
   buttonReset: {fileID: 107523069}
   buttonImage: {fileID: 651178260}
   cameraParent: {fileID: 1169991777}
   pictureParent: {fileID: 674077661}
+  image: {fileID: 674077662}
+  visualFindColor: {fileID: 1517156841}
+  levelSO: {fileID: 11400000, guid: a470e47d4e65fe448ae15ede0b02a0e0, type: 2}
 --- !u!114 &2107888097
 MonoBehaviour:
   m_ObjectHideFlags: 0

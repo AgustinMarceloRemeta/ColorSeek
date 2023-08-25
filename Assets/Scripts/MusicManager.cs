@@ -17,8 +17,6 @@ public class MusicManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void ChangeMusic()
-    {
-        source.volume = slider.value;
-    }
+    public void ChangeMusic() => source.volume = slider.value;
+    
 }
