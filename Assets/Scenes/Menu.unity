@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 259057505}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2572072
+  m_Size: 0.5299417
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3574,7 +3574,7 @@ GameObject:
   - component: {fileID: 719990432}
   - component: {fileID: 719990431}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image no camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
